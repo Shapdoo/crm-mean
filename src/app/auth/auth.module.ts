@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -17,7 +18,9 @@ import { AuthPageComponent } from './pages/auth-page/auth-page.component';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule,
+
   ]
 })
 export class AuthModule { }

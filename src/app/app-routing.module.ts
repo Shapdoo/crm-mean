@@ -3,22 +3,22 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "crm",
-    loadChildren: () => import('@crm/crm.module').then( m => m.CrmModule )
+    path: 'auth',
+    loadChildren: () => import('@auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: "auth",
-    loadChildren: () => import('@auth/auth.module').then( m => m.AuthModule )
+    path: 'crm',
+    loadChildren: () => import('@crm/crm.module').then((m) => m.CrmModule),
   },
   {
-    path: "**",
+    path: '**',
     redirectTo: 'auth',
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
